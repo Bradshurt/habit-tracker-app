@@ -63,6 +63,8 @@ function markedDone(habitId, quantity){
             completee: true,
             quantite: quantity
         };
+        table.push(entry);
+        setEntry(table);
         return entry
     }
 }

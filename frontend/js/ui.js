@@ -31,6 +31,7 @@ function showInfoHabit(element){
     const pInfoObjectif = document.createElement("span");
     const pInfoFequence = document.createElement("span");
     const btnDone = document.createElement("button");
+    btnDone.id = "btnDone";
 
     name.textContent = element.nom;
 
@@ -44,6 +45,46 @@ function showInfoHabit(element){
     pInfoFequence.textContent = element.frequence;
 
     btnDone.textContent = "Valider l'habitude";
+    const dateTime = new Date().toISOString().split("T")[0];
+    const table = getEntry();
+    const existEntry = table.find(element => element.habitudeId === element.id && element.date === dateTime);
+
+    if(existEntry){
+        btnDone.disabled = true;
+        btnDone.style.opacity = "0.5"
+    };
+
+    const divChamp = document.querySelector(".input_champ");
+    divChamp.innerHTML ="";
+    btnDone.addEventListener("click", () => {
+        if(element.objectif){
+            const formLI = document.createElement("div");
+            formLI.className = "FormLi";
+
+            const labelQuantity = document.createElement("label");
+            labelQuantity.name = "labelQuantite";
+            labelQuantity.textContent = "Quantité";
+
+            const inputQuantity = document.createElement("input");
+            inputQuantity.type = "text";
+
+            const inputValid = document.createElement("button");
+            inputValid.textContent = "Valider";
+            inputValid.addEventListener("click", () => {
+                const quantity = inputQuantity.value;
+                markedDone(element.id, quantity);
+                divChamp.innerHTML = "";
+            });
+
+            divChamp.appendChild(labelQuantity);
+            formLI.appendChild(inputQuantity);
+            formLI.appendChild(inputValid);
+            divChamp.appendChild(formLI);
+        } else{
+            markedDone(element.id, null);
+        }
+    })
+ 
 
     divNCT.appendChild(name);
     divNCT.appendChild(category);
@@ -55,8 +96,11 @@ function showInfoHabit(element){
 
     div.appendChild(divNCT);
     div.appendChild(divInfo);
+
+
     div.appendChild(divButton);
-}
+};
+
 
 // affichage du formulair d'ajout des habitudes et de la liste des habitude
 const addButtonForm = document.getElementById("add");
