@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body {
+    display: flex;
+    justify-content: center;
+    min-height: 80%;
+	margin: auto;
+	font-family: 'Montserrat', sans-serif;
+}
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 50px;
+    width: 100%;
+    gap: 30px;
+}
+aside {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 30%;
+    border: 1px solid;
+    border-radius: 12px;
+    padding: 10px;
+}
+
+.sav-info{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    border-radius: 20px;
+}
+.sav-info form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    gap: 20px;
+}
+.sav-info .habitSelct{
+    display: flex;
+    flex-direction: row;
+}
+.sav-info form select{
+    display: flex;
+    border-radius: 20px;
+    text-align: center;
+    padding: 10px;
+}
+.sav-info form input{
+    border-radius: 20px;
+    border: 1px solid;
+}
+.sav-info .input_champ{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.sav-info .FormLi{
+    display: flex;
+    flex-direction: row;
+}
+.sav-info .FormLi input{
+    padding: 8px;
+}
+.sav-info .FormLi button{
+    width: 50%;
+    padding: 8px;
+    border: 1px solid;
+    border-radius: 20px;
+}
+.sav-info div{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+div .div_name_category_type{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    padding: 12px;  
+}
+.div_name_category_type span{
+    padding: auto;
+}
+div .div_info-type {
+    display: flex;
+    flex-direction: row;
+}
+div .div_button{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.div_button button{
+    width: 50%;
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#form-category {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    border-radius: 12px;
+    padding: 10px;
+    gap: 20px;
+}
+
+.button_display{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 8px;
+}
+.button_display button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    padding: 8px;
+    border: 1px solid;
+    border-radius: 20px;
+    cursor: pointer;
+
+}
+.form_list_habit{
+    display: flex;
+    width: 100%;
+    gap: 10px;
+}
+#form-habit{
+    display: none;
+    flex-direction: column;
+    gap: 16px;
+    width: 90%;
+    border: 1px solid;
+    border-radius: 12px;
+    padding: 10px;
+}
+.title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+.title button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: red;
+}
+form h2{
+    font-size: 18px;
+    font-weight: 500;
+}
+.error{
+    text-align: center;
+    padding: 5px;
+    background-color: #f8d7da;
+    border: 1px solid #f1aeb5;
+    color: #58151c;
+    border-radius: 10px;
+}
+.champ {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.champ label{
+    font-size: 13px;
+}
+.champ input,
+.champ select{
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid;
+    font-size: 14px;
+}
+input[type="submit"]{
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.objectif{
+    display: flex;
+    gap: 10px;
+}
+.objectif input {
+    width: 50%;
+}
+.ul_div{
+    display: none;
+    flex-direction: column;
+    width: 80%;
+    border: 1px solid;
+    border-radius: 12px;
+    padding: 15px;
+    flex: 1;
+}
+.ul_div h2{
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+    padding: auto;
+}
+th {
+    text-align: left;
+    font-size: 13px;
+    padding: 8px 12px;
+    border-bottom: 1px solid #444;
+}
+td{
+    padding: 14px 12px;
+    border-bottom: 1px solid #333;
+    font-size: 14px;
+}
+.td-type,
+.td-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.status {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.vert  { background-color: #4caf50; }
+.rouge { background-color: #e53935; }
+
+td button {
+    display: flex;
+    width: 100%;
+    padding: 6px;
+    margin-bottom: 6px;
+    border-radius: 6px;
+    border: 1px solid #555;
+    background-color: #3a3a5e;
+    color: white;
+    cursor: pointer;
+    font-size: 13px;
+}
+.td-actions button {
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    main{
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        margin: 10px;
+        gap: 15px;
+    }
+    aside{
+        align-items: center;
+        width: 90%;
+        max-height: none;
+    }
+    #form-category{
+        width: 90%;
+    }
+    .form_list_habit {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .form_list_habit form{
+        justify-content: center;
+        width: 100%;
+    }
+    .ul_div{
+        width: 100%;
+    }
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Todos</title>
+</head>
+<body>
+
+    <main>
+        <aside class="form_categorie">
+            <div class="sav-info">
+                <div class="title-habiteSelect">
+                    <h2>Habitude</h2>
+                </div>
+                <form id="form-select">
+                    <div class="habitSelct">
+                        <select name="selectHbait" id="selectHbait">
+                            <option value="">Choisissez une habitude</option>
+                        </select>
+                        <input type="submit" value="Choisir">
+                    </div>
+                    <div class="input_champ"></div>
+                </form>
+                <div class="infos-habit"></div>
+            </div>
+            <form id="form-category">
+                <div class="title_categorie">
+                    <h2>Les catégories</h2>
+                </div>
+                <div class="champ">
+                    <label for="name">Nom de la catégorie</label>
+                    <input type="text" name="nom_catégorie" id="nom-categorie">
+                </div>
+                <div class="champ">
+                    <label for="name">Couleur</label>
+                    <select name="categorie" id="color-categorie">
+                        <option value="">Selectionnez une couleur</option>
+                        <option value="rouge">Rouge</option>
+                        <option value="violet">Violet</option>
+                        <option value="bleu">Bleu</option>
+                        <option value="vert">Vert</option>
+                        <option value="rose">Rose</option>
+                        <option value="jaune">Jaune</option>
+                    </select>
+                </div>
+                <input type="submit" value="Enregistrer">
+            </form>
+            <div class="button_display">
+                <button id="add">Ajouter une habitude</button>
+                <button id="show">Afficher la liste</button>
+            </div>
+        </aside>
+        <section class="form_list_habit">
+            <form id="form-habit">
+                <div class="title">
+                    <h2 class="element">Formulair</h2>
+                    <button id="suppForm"><i class="fa-solid fa-x"></i></button>
+                </div>
+                <div class="info"></div>
+                <div class="champ">
+                    <label for="name">nom</label>
+                    <input type="text" name="nom" id="name">
+                </div>
+                <div class="champ">
+                    <label for="type">Type</label>
+                    <select name="type" id="type">
+                        <option value="">Choisissez un type</option>
+                        <option value="construire">construire</option>
+                        <option value="briser">briser</option>
+                    </select>
+                </div>
+                <div class="champ">
+                    <label for="category">Catégories</label>
+                    <select name="Catégories" id="category">
+                        <option value="">Choisissez une catégorie</option>
+                    </select>
+                </div>
+                <div class="champ">
+                    <label for="frequence">Fréquence</label>
+                    <select name="Fréquence" id="frequence">
+                        <option value="">Choisissez une fréquence</option>
+                        <option value="Journalier">Journalier</option>
+                        <option value="Hebdomadaire">Hebdomadaire</option>
+                        <option value="Mensuel">Mensuel</option>
+                        <option value="Annuel">Annuel</option>
+                    </select>
+                </div>
+                <div class="champ">
+                    <label for="objectifValeur">Obijectif (optionel)</label>
+                    <div class="objectif">
+                        <input type="number" name="objectifValeur" id="objectifValeur" min="0" step="any" placeholder="30...">
+                        <select name="objectifUnite" id="objectifUnite">
+                            <option value="">Choisir une unité</option>
+                            <option value="heures">heures</option>
+                            <option value="minutes">minutes</option>
+                            <option value="fois">fois</option>
+                            <option value="km">km</option>
+                            <option value="pas">pas</option>
+                            <option value="pages">pages</option>
+                            <option value="litres">litres</option>
+                            <option value="fois-par-semaine">fois par semaine</option>
+                        </select>
+                    </div>
+                </div>
+                <input type="submit" value="Envoyer">
+            </form>
+            <div class="ul_div">
+                <div class="title">
+                    <h2>Liste des habitudes</h2>
+                    <button id="supList"><i class="fa-solid fa-x"></i></button>
+                </div>
+                <table id="liste-habitude">
+                    <thead>
+                        <tr>
+                            <th>Nom</th>
+                            <th>Type</th>
+                            <th>Catégories</th>
+                            <th>Fréquence</th>
+                            <th>Objetif</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody-habitude"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    
+    <script src="js/storage.js"></script>
+    <script src="js/categories.js"></script>
+    <script src="js/habitudes.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/validation_field.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
